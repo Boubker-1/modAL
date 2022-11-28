@@ -97,6 +97,9 @@ def retrieve_rows(X: modALinput,
         return X[I]
     elif isinstance(X, list):
         return np.array(X)[I].tolist()
+    else:
+        print(I)
+        return [I]
 
     raise TypeError('%s datatype is not supported' % type(X))
 
